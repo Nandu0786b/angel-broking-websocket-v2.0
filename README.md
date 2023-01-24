@@ -6,7 +6,6 @@
 ### Features
 
 - Order feed
-- Data Feed
 # User Details
 	apikey='api key'
 	username='user name'
@@ -23,7 +22,6 @@
 	data = obj.generateSession(username,pwd,pyotp.TOTP(token).now())
 	AUTH_TOKEN = data['data']['jwtToken']
 	AUTH_TOKEN=AUTH_TOKEN[7:]
-	print(AUTH_TOKEN)
 	refreshToken= data['data']['refreshToken']
 	FEED_TOKEN=obj.getfeedToken()
 	res = obj.getProfile(refreshToken)
